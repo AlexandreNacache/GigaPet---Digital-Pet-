@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+  <style>
+img:hover {
+  animation: shake 0.9s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {   
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -3px) rotate(-2deg); }
+  20% { transform: translate(-3px, 1px) rotate(2deg); }
+  30% { transform: translate(3px, 1px) rotate(0deg); }
+  40% { transform: translate(3px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 3px) rotate(1deg); }
+  60% { transform: translate(-3px, 2px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -2px) rotate(2deg); }
+  90% { transform: translate(1px, 3px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(-1deg); }
+}
+</style>
+  <body>
+    <header>
+      <h1>
+        This is your Giga Pet
+      </h1>
+    </header>
+
+    <main>
+      <section class="pet-image-container">
+         <!-- Replace pet image with your own pet image --> 
+        <img class="pet-image" src="https://cdn.glitch.com/efec6a74-39ce-4fb4-ae8d-1c8bed512453%2Fdownload.jpeg?v=1586328874961">
+      </section>
+      <section class="dashboard">
+        <div>Name: <strong><span class="name"></span></strong></div>
+        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
+        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        
+        
+        <div class="button-container">
+        <button onclick="playAudio()" type="button">Bark</button> <!--new-->
+          
+          <button class="treat-button">
+            Treat
+          </button>
+          <button class="play-button">
+            Play
+          </button>
+          <button class="exercise-button">
+            Exercise
+          </button>
+          <audio id="myAudio">
+    <source src="https://cdn.glitch.com/efec6a74-39ce-4fb4-ae8d-1c8bed512453%2Fbark.mp3?v=1586825263930" type="audio/mpeg">
+          </audio>
+          
+        </div>
+        <p>
+   <!-- <audio autoplay>
+          <source src="https://cdn.glitch.com/efec6a74-39ce-4fb4-ae8d-1c8bed512453%2FYiruma%20-%20River%20Flows%20in%20You.mp3?v=1586928524773" type="audio/mpeg">
+        </audio> 
+     -->
+        </p>
+       </section>
+      
+    </main>
+    
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+  </body>
+</html>
